@@ -1,2 +1,4 @@
 # spring-rest-client
-Dynamic REST client supporting DNS SRV record endpoint resolution.
+Dynamic Spring based REST client supporting service lookup via DNS SRV records.
+
+
