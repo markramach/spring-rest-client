@@ -19,10 +19,10 @@ import java.lang.annotation.Target;
 public @interface RestClient {
     
     /**
-     * Defines the consul service id for the client. This will be 
+     * Defines the service name for the client. This will be 
      * used to determine available endpoints for client requests.
      * 
-     * @return The consul service id for the client.
+     * @return The service name for the client.
      */
     String value();
     

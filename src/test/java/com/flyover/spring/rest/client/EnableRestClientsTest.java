@@ -21,7 +21,7 @@ import com.flyover.spring.rest.client.EndpointProvider;
  * @author mramach
  *
  */
-public class EnableConsulClientsTest {
+public class EnableRestClientsTest {
     
     @Test
     public void testProxyCreatedForTestConsulClient() {
@@ -75,7 +75,7 @@ public class EnableConsulClientsTest {
     }
     
     @Configuration
-    @EnableRestClients("com.ctlts.rnr.rs.client")
+    @EnableRestClients("com.flyover.spring.rest.client")
     public static class TestConfiugrationFromPackage {
         
         @Bean
