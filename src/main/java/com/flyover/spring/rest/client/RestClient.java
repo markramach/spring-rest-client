@@ -32,7 +32,7 @@ public @interface RestClient {
      * 
      * @return The {@link LoadBalancer} type
      */
-    Class<? extends LoadBalancer> loadBalancer() default FirstAvailableLoadBalancer.class;
+    Class<? extends LoadBalancer> loadBalancer() default RoundRobinLoadBalancer.class;
     
     /**
      * If provided instructs the client to use the declared 
@@ -40,6 +40,6 @@ public @interface RestClient {
      * 
      * @return The endpoint provider bean reference.
      */
-    String endpointProvider() default "endpointProvider";
+    String endpointProvider() default "";
 
 }

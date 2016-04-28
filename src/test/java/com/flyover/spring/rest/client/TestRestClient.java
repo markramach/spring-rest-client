@@ -12,14 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.flyover.spring.rest.client.RestClient;
-import com.flyover.spring.rest.client.RoundRobinLoadBalancer;
-
 /**
  * @author mramach
  *
  */
-@RestClient(value = "test", loadBalancer = RoundRobinLoadBalancer.class, endpointProvider = "endpointProvider")
+@RestClient(value = "test", endpointProvider = "endpointProvider")
 public interface TestRestClient {
 
     @RequestMapping("/test")
