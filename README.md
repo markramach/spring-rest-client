@@ -73,6 +73,9 @@ Also notice with skydns, running a lookup multiple times results in the result s
 ### Rest Client Service Lookup
 The advantage of using DNS as a service registry is the fact that DNS is a well established protocol supported by almost every OS running today. Why not take advantage. This dynamic REST client utilizes DNS SRV records via an injected component called `DnsEndpointProvider`. This class uses an open source [DNS](https://github.com/spotify/dns-java) library provided by spotify. Based on the load balancer type selected, the set of endpoints is refreshed at a regular interval. This allows new service instances to be added and removed with minimal disruption to the client.
 
+### SSL (https)
+The only step necessary to consume an SSL endpoint is to use a service name including an `_ssl` element in the service name. `service._ssl.skydns.local` for instance. The `DnsEndpointProvider` will then return endpoints using `https` as the scheme instead of `http`.
+
 ## Additional Configuration
 
 ### Alternate Client Package
